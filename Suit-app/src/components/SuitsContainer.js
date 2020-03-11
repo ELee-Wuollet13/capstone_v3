@@ -48,7 +48,7 @@ class SuitsContainer extends Component {
     return (
       <div>
         <div className="inputContainer">
-          <input className="taskInput" type="text" placeholder="Add a task" maxLength="50"
+          <input className="taskInput" type="text" placeholder="Add a Suit" maxLength="50"
             onKeyPress={this.createSuit} ref={(input)=>this.getTitle = input} />
         </div>
         <div className="listWrapper">
