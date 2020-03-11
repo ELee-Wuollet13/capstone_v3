@@ -57,11 +57,10 @@ class SuitsContainer extends Component {
         return(
 
           <li className="task" key={suit.id} id={suit.id}>
-          <input className="AvailStatus" type="radio" name={suit.id} onChange={(e) => this.updateSuit(e, suit.id)} />In
-          <input className="AvailStatus" type="radio" name={suit.id} onChange={(e) => this.updateSuit(e, suit.id)} />Available
-          <input className="AvailStatus" type="radio" name={suit.id} onChange={(e) => this.updateSuit(e, suit.id)} />Reserved
-          <input className="AvailStatus" type="radio" name={suit.id} onChange={(e) => this.updateSuit(e, suit.id)} />Out_____
-
+          <input className="AvailStatus" type="radio" name={suit.id} value="In" onChange={(e) => this.updateSuit(e, suit.id)} />In
+          <input className="AvailStatus" type="radio" name={suit.id} value="Available" onChange={(e) => this.updateSuit(e, suit.id)} />Available
+          <input className="AvailStatus" type="radio" name={suit.id} value="Reserved" onChange={(e) => this.updateSuit(e, suit.id)} />Reserved
+          <input className="AvailStatus" type="radio" name={suit.id} value="Out" onChange={(e) => this.updateSuit(e, suit.id)} />Out_____
 
 
 
