@@ -42,31 +42,39 @@ class SuitsContainer extends Component {
 
   componentDidMount() {
     this.getSuits();
-	}
+  }
 
   render() {
     return (
       <div>
-        <div className="inputContainer">
-          <input className="taskInput" type="text" placeholder="Add a Suit" maxLength="50"
-            onKeyPress={this.createSuit} ref={(input)=>this.getTitle = input} />
-        </div>
-        <div className="listWrapper">
-          <ul className="taskList">
-            {this.props.suits.map((suit) => {
-              return(
-                <li className="task" key={suit.id} id={suit.id}>
-                  <input className="taskCheckbox" type="checkbox"
-                    checked={suit.avail} onChange={(e) => this.updateSuit(e, suit.id)} />
-                  <label className="taskLabel">{suit.title}</label>
-                  <span className="deleteTaskBtn" onClick={(e) => this.deleteSuit(suit.id)}>
-                    x
-                  </span>
-                </li>
-              )
-            })}
-          </ul>
-        </div>
+      <div className="inputContainer">
+      <input className="taskInput" type="text" placeholder="Add a Suit" maxLength="50"
+      onKeyPress={this.createSuit} ref={(input)=>this.getTitle = input} />
+      </div>
+      <div className="listWrapper">
+      <ul className="taskList">
+      {this.props.suits.map((suit) => {
+        return(
+
+          <li className="task" key={suit.id} id={suit.id}>
+          <input className="AvailStatus" type="radio" name={suit.id} onChange={(e) => this.updateSuit(e, suit.id)} />In
+          <input className="AvailStatus" type="radio" name={suit.id} onChange={(e) => this.updateSuit(e, suit.id)} />Available
+          <input className="AvailStatus" type="radio" name={suit.id} onChange={(e) => this.updateSuit(e, suit.id)} />Reserved
+          <input className="AvailStatus" type="radio" name={suit.id} onChange={(e) => this.updateSuit(e, suit.id)} />Out_____
+
+
+
+
+          <label className="taskLabel">{suit.title}</label>
+
+          <span className="deleteTaskBtn" onClick={(e) => this.deleteSuit(suit.id)}>
+          x
+          </span>
+          </li>
+        )
+      })}
+      </ul>
+      </div>
       </div>
     )
   }
