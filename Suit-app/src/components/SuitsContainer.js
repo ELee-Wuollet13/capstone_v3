@@ -62,8 +62,6 @@ class SuitsContainer extends Component {
           <input className="AvailStatus" type="radio" name={suit.id} value="Reserved" onChange={(e) => this.updateSuit(e, suit.id)} />Reserved
           <input className="AvailStatus" type="radio" name={suit.id} value="Out" onChange={(e) => this.updateSuit(e, suit.id)} />Out_____
 
-
-
           <label className="taskLabel">{suit.title}</label>
 
           <span className="deleteTaskBtn" onClick={(e) => this.deleteSuit(suit.id)}>
