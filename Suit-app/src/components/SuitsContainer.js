@@ -55,7 +55,6 @@ class SuitsContainer extends Component {
       <ul className="taskList">
       {this.props.suits.map((suit) => {
         return(
-
           <li className="task" key={suit.id} id={suit.id}>
           <input className="AvailStatus" type="radio" name={suit.id} value="In" onChange={(e) => this.updateSuit(e, suit.id)} />In
           <input className="AvailStatus" type="radio" name={suit.id} value="Available" onChange={(e) => this.updateSuit(e, suit.id)} />Available
@@ -65,7 +64,7 @@ class SuitsContainer extends Component {
           <label className="taskLabel">{suit.title}</label>
 
           <span className="deleteTaskBtn" onClick={(e) => this.deleteSuit(suit.id)}>
-          x
+          _____Delete
           </span>
           </li>
         )

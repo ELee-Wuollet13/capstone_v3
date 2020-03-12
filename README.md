@@ -28,7 +28,7 @@ _Day spent trying to convert Karaoke app into frontend_
 _Day successfully connected a react-redux frontend application with the Ruby rails Database_
 
 #### _Wednesday March 11th_
-_
+_Updated and tweaked react redux frontend to send proper props to the Rails database_
 
 # _Capstone REI Rental_
 
@@ -47,9 +47,7 @@ _The primary goals will be an easy access application that sorts wetsuits by ava
 ## Setup/Installation Requirements
 
 * _Access the GitHub repository by copying this (https://github.com/ELee-Wuollet13/Capstone.git) link into a console command to 'git clone [link]'_
-* _navigate into the program and enter the console command 'bash startup.bash' this will automatically run 'bundle install, rails db:create, rake db:migrate, rake db:seed and rails s'. As of submission no other setup is required._
-* _In your browser go to 'localhost:3000'_
-* _click the Navbar links to access the menus_
+* _navigate into the program's two sides (suit-api and Suit-app, preferably in that order) and enter the console command 'bash startup.bash' this will automatically run 'bundle install, rails db:create, rake db:migrate, rake db:seed and rails s' for the API and npm install for the front end. As of submission no other setup is required._
 
 
 ## Known Bugs
