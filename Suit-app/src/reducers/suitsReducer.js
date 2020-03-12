@@ -1,4 +1,4 @@
-import { LOAD_SUITS, ADD_SUIT, TOGGLE_SUIT, DELETE_SUIT } from '../actions/actionTypes'
+import { LOAD_SUITS, ADD_SUIT, MODIFY_SUIT, DELETE_SUIT } from '../actions/actionTypes'
 
 function suitsReducer(state = [], action)
 {
@@ -12,11 +12,11 @@ function suitsReducer(state = [], action)
                 {
                     id: action.id,
                     title: action.title,
-                    avail: false
+                    avail: "in"
                 }
             ];
 
-        case TOGGLE_SUIT:
+        case MODIFY_SUIT:
             return state.map(suit => (suit.id === action.index)
                   ? {...suit, avail: !suit.avail}
                   : suit

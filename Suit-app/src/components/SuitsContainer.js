@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { connect } from 'react-redux'
-import { loadSuits, addSuit, toggleSuit, deleteSuit } from '../actions/actionCreators'
+import { loadSuits, addSuit, modifySuit, deleteSuit } from '../actions/actionCreators'
 
 class SuitsContainer extends Component {
 
@@ -27,7 +27,7 @@ class SuitsContainer extends Component {
   updateSuit = (e, id) => {
     axios.put(`/api/v1/suits/${id}`, {suit: {avail: e.target.checked}})
     .then(response => {
-      this.props.dispatch(toggleSuit(id))
+      this.props.dispatch(modifySuit(id))
     })
     .catch(error => console.log(error))
   }
