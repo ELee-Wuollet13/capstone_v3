@@ -1,5 +1,5 @@
 ## _Capstone Work Log:_
-#### _Friday Febuary 28th_
+#### _Friday February 28th_
 _Reviewed Ruby lessons and Marios project for areas I should focus on in the creation of my projects code._
 _Still studying and beginning to program_
 _Add rails project for possible modification_
@@ -19,15 +19,16 @@ make call from react to database_
 
 #### _Friday march 6th_
 _Began react frontend_
-_Functional redux kareoke app informs next steps in calling database_
+_Functional redux karaoke app informs next steps in calling database_
 
 #### _Monday March 9th_
-_Day spent trying to convert Karoeke app into frontend_
+_Day spent trying to convert Karaoke app into frontend_
 
 #### _Tuesday March 10th_
 _Day successfully connected a react-redux frontend application with the Ruby rails Database_
 
 #### _Wednesday March 11th_
+_
 
 # _Capstone REI Rental_
 
@@ -39,7 +40,7 @@ _Day successfully connected a react-redux frontend application with the Ruby rai
 
 _This application will allow employees to take customer orders and add them to the database of rental orders. It should have a wide array of options for employees to add and sort by store location._
 
-_The primary goals will be an easy access application that sorts wetsuits by availability (in, out, available or reserved).  It should also have and 'effective size' category for suits which are technically classified as one size, but because of the brand are far close to another.
+_The primary goals will be an easy access application that sorts wetsuits by availability (in, out, available or reserved).  It should also have and 'effective size' category for suits which are technically classified as one size, but because of the brand are far close to another._
 
 ![](./CapstoneOverviewDiagram.jpg)
 

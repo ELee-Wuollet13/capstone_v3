@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2020_03_10_191800) do
 
   create_table "suits", force: :cascade do |t|
     t.string "title"
-    t.boolean "avail"
+    t.string "avail"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
