@@ -5,6 +5,7 @@ import { loadSuits, addSuit, modifySuit, deleteSuit } from '../actions/actionCre
 
 class SuitsContainer extends Component {
 
+
   getSuits() {
     axios.get('/api/v1/suits')
     .then(response => {
@@ -45,9 +46,26 @@ class SuitsContainer extends Component {
   }
 
   render() {
+    const styleTest = {
+      margin: '10px',
+    }
+    const suitStyle = {
+      borderWidth: '3px',
+      borderColor: 'black',
+      borderRadius: '10px',
+      backgroundColor: 'gray',
+      margin: '10px',
+      padding: '4px'
+    }
+    const suitAddStyle = {
+      marginLeft: '40%',
+    }
+
+
     return (
+
       <div>
-      <div className="inputContainer">
+      <div style={suitAddStyle} className="inputContainer">
       <input className="taskInput" type="text" placeholder="Add a Suit" maxLength="50"
       onKeyPress={this.createSuit} ref={(input)=>this.getTitle = input} />
       </div>
@@ -55,7 +73,7 @@ class SuitsContainer extends Component {
       <ul className="taskList">
       {this.props.suits.map((suit) => {
         return(
-          <li className="task" key={suit.id} id={suit.id}>
+          <li style={suitStyle} className="task" key={suit.id} id={suit.id}>
           <div class="row">
           <label className="taskLabel col-5">{suit.title}</label>
           <div class="col-3">
@@ -65,10 +83,8 @@ class SuitsContainer extends Component {
           <input className="AvailStatus" type="radio" name={suit.id} value="Out" onChange={(e) => this.updateSuit(e, suit.id)} />Out
           </div>
 
-
-
           <div className="deleteTaskBtn col-3" onClick={(e) => this.deleteSuit(suit.id)}>
-          Delete
+          Click here to delete
           </div>
           </div>
 
