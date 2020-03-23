@@ -56,16 +56,22 @@ class SuitsContainer extends Component {
       {this.props.suits.map((suit) => {
         return(
           <li className="task" key={suit.id} id={suit.id}>
+          <div class="row">
+          <label className="taskLabel col-5">{suit.title}</label>
+          <div class="col-3">
           <input className="AvailStatus" type="radio" name={suit.id} value="In" onChange={(e) => this.updateSuit(e, suit.id)} />In
           <input className="AvailStatus" type="radio" name={suit.id} value="Available" onChange={(e) => this.updateSuit(e, suit.id)} />Available
           <input className="AvailStatus" type="radio" name={suit.id} value="Reserved" onChange={(e) => this.updateSuit(e, suit.id)} />Reserved
-          <input className="AvailStatus" type="radio" name={suit.id} value="Out" onChange={(e) => this.updateSuit(e, suit.id)} />Out_____
+          <input className="AvailStatus" type="radio" name={suit.id} value="Out" onChange={(e) => this.updateSuit(e, suit.id)} />Out
+          </div>
 
-          <label className="taskLabel">{suit.title}</label>
 
-          <span className="deleteTaskBtn" onClick={(e) => this.deleteSuit(suit.id)}>
-          _____Delete
-          </span>
+
+          <div className="deleteTaskBtn col-3" onClick={(e) => this.deleteSuit(suit.id)}>
+          Delete
+          </div>
+          </div>
+
           </li>
         )
       })}
