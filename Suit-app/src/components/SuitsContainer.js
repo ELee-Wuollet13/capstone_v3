@@ -78,15 +78,23 @@ class SuitsContainer extends Component {
       marginRight:'40%',
       marginTop: '5px',
       borderRadius: '10px',
-      padding: '2px'
+      padding: '2px',
+      borderStyle: 'solid',
+      borderWidth: '1px',
+      borderColor: 'black',
+      borderRadius: '3px',
     }
 
     const inButton = {
-      backgroundColor: '#259EDA',
+      backgroundColor: '#D99C26',
       marginLeft: '12%',
       marginTop: '5px',
       borderRadius: '10px',
-      padding: '2px'
+      padding: '2px',
+      borderStyle: 'solid',
+      borderWidth: '1px',
+      borderColor: 'black',
+      borderRadius: '3px',
     }
 
     const outButton = {
@@ -94,15 +102,23 @@ class SuitsContainer extends Component {
       marginLeft: '12%',
       marginTop: '5px',
       borderRadius: '10px',
-      padding: '2px'
+      padding: '2px',
+      borderStyle: 'solid',
+      borderWidth: '1px',
+      borderColor: 'black',
+      borderRadius: '3px',
     }
 
     const availableButton = {
-      backgroundColor: '#2BD49D',
+      backgroundColor: '#5DB14E',
       marginLeft: '12%',
       marginTop: '5px',
       borderRadius: '10px',
-      padding: '2px'
+      padding: '2px',
+      borderStyle: 'solid',
+      borderWidth: '1px',
+      borderColor: 'black',
+      borderRadius: '3px',
     }
 
     const reservedButton = {
@@ -110,7 +126,11 @@ class SuitsContainer extends Component {
       marginLeft: '12%',
       marginTop: '5px',
       borderRadius: '10px',
-      padding: '2px'
+      padding: '2px',
+      borderStyle: 'solid',
+      borderWidth: '1px',
+      borderColor: 'black',
+      borderRadius: '3px',
     }
 
     const suitName = {
@@ -140,7 +160,7 @@ class SuitsContainer extends Component {
           <label style={suitName} className="taskLabel col-5">{suit.title}</label>
           <div class="col-3">
           <span style={inButton}>
-          <input className="AvailStatus" type="radio" name={suit.id} value="In" onChange={(e) => this.updateSuit(e, suit.id)} />In
+          <input className="AvailStatus" type="radio" name={suit.id} value="In" checked={true} onChange={(e) => this.updateSuit(e, suit.id)} />In
           </span>
           <span style={availableButton}>
           <input className="AvailStatus" type="radio" name={suit.id} value="Available" onChange={(e) => this.updateSuit(e, suit.id)} />Available
@@ -154,7 +174,7 @@ class SuitsContainer extends Component {
           </div>
 
           <div style={deleteButton} className="deleteTaskBtn col-3" onClick={(e) => this.deleteSuit(suit.id)}>
-          Click here to delete
+          (Admin only) Click here to delete
           </div>
           </div>
 
