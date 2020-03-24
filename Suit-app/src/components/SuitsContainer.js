@@ -46,19 +46,78 @@ class SuitsContainer extends Component {
   }
 
   render() {
-    const styleTest = {
-      margin: '10px',
-    }
-    const suitStyle = {
+
+    const suitCardStyle = {
+      borderLeftWidth: '2%',
+      borderStyle: 'solid',
       borderWidth: '3px',
       borderColor: 'black',
       borderRadius: '10px',
-      backgroundColor: 'gray',
       margin: '10px',
-      padding: '4px'
+      padding: '4px',
+      boxShadow: '4px 4px #AEAEAE',
+      backgroundColor: '#FDFDFD',
     }
     const suitAddStyle = {
+      borderLeftWidth: '2%',
+      borderStyle: 'solid',
+      borderWidth: '3px',
+      borderColor: 'black',
+      borderRadius: '10px',
+      marginLeft: '2%',
+      marginTop: '2%',
+      marginRight: '2%',
+      padding: '8px',
+      boxShadow: '4px 4px #AEAEAE',
+      backgroundColor: '#FDFDFD',
+    }
+
+    const deleteButton = {
+      backgroundColor: 'red',
       marginLeft: '40%',
+      marginRight:'40%',
+      marginTop: '5px',
+      borderRadius: '10px',
+      padding: '2px'
+    }
+
+    const inButton = {
+      backgroundColor: '#259EDA',
+      marginLeft: '12%',
+      marginTop: '5px',
+      borderRadius: '10px',
+      padding: '2px'
+    }
+
+    const outButton = {
+      backgroundColor: '#DA6125',
+      marginLeft: '12%',
+      marginTop: '5px',
+      borderRadius: '10px',
+      padding: '2px'
+    }
+
+    const availableButton = {
+      backgroundColor: '#2BD49D',
+      marginLeft: '12%',
+      marginTop: '5px',
+      borderRadius: '10px',
+      padding: '2px'
+    }
+
+    const reservedButton = {
+      backgroundColor: '#2238dd',
+      marginLeft: '12%',
+      marginTop: '5px',
+      borderRadius: '10px',
+      padding: '2px'
+    }
+
+    const suitName = {
+      marginLeft: "10%",
+      fontSize: "24px",
+      textAlign: 'center',
+      padding: '2px'
     }
 
 
@@ -66,24 +125,35 @@ class SuitsContainer extends Component {
 
       <div>
       <div style={suitAddStyle} className="inputContainer">
+      (Admin only) Input the Name and Size of the suit being added:
       <input className="taskInput" type="text" placeholder="Add a Suit" maxLength="50"
       onKeyPress={this.createSuit} ref={(input)=>this.getTitle = input} />
       </div>
+
+
       <div className="listWrapper">
       <ul className="taskList">
       {this.props.suits.map((suit) => {
         return(
-          <li style={suitStyle} className="task" key={suit.id} id={suit.id}>
+          <li style={suitCardStyle} className="task" key={suit.id} id={suit.id}>
           <div class="row">
-          <label className="taskLabel col-5">{suit.title}</label>
+          <label style={suitName} className="taskLabel col-5">{suit.title}</label>
           <div class="col-3">
+          <span style={inButton}>
           <input className="AvailStatus" type="radio" name={suit.id} value="In" onChange={(e) => this.updateSuit(e, suit.id)} />In
+          </span>
+          <span style={availableButton}>
           <input className="AvailStatus" type="radio" name={suit.id} value="Available" onChange={(e) => this.updateSuit(e, suit.id)} />Available
+          </span>
+          <span style={reservedButton}>
           <input className="AvailStatus" type="radio" name={suit.id} value="Reserved" onChange={(e) => this.updateSuit(e, suit.id)} />Reserved
+          </span>
+          <span style={outButton}>
           <input className="AvailStatus" type="radio" name={suit.id} value="Out" onChange={(e) => this.updateSuit(e, suit.id)} />Out
+          </span>
           </div>
 
-          <div className="deleteTaskBtn col-3" onClick={(e) => this.deleteSuit(suit.id)}>
+          <div style={deleteButton} className="deleteTaskBtn col-3" onClick={(e) => this.deleteSuit(suit.id)}>
           Click here to delete
           </div>
           </div>

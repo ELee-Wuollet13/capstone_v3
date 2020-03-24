@@ -3,14 +3,14 @@ import React, { Component } from 'react';
 import './App.css';
 import SuitsContainer from './components/SuitsContainer'
 import Navbar from './components/Navbar'
+import Header from './components/Header'
 
 class App extends Component {
   render() {
     return (
       <div className="container">
-        <div className="header">
-          <h1>Suit List</h1>
-        </div>
+
+      <Header />
         <Navbar />
         <SuitsContainer />
       </div>

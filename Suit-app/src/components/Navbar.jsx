@@ -27,7 +27,7 @@ function Navbar(){
     display: "inline-block",
     display: "flex",
     flexDirection: "row",
-    backgroundColor: 'rgba(0, 43, 201, 1)',
+    backgroundColor: '#c1773e',
     width: "100vw",
     height: "52px",
     color: "white",
